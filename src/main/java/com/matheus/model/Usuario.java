@@ -11,7 +11,7 @@ public class Usuario {
     private int id;
     private String nome;
     private String email;
-    @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Telefone> telefones;
 
     public int getId() {
