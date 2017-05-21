@@ -3,6 +3,8 @@ package com.matheus.repository;
 
 import com.matheus.model.Usuario;
 import com.matheus.repository.contracts.IUsuarioDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,9 +19,13 @@ public class UsuarioDAO implements IUsuarioDAO{
     @PersistenceContext
     private EntityManager manager;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     public void salvar(Usuario usuario) {
-        manager.persist(usuario);
+        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+        // manager.persist(usuario);
     }
 
     @Override
