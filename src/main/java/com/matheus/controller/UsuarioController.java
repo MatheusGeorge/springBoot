@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,8 +24,10 @@ public class UsuarioController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Usuario> listar() {
-        return usuarioDAO.listar();
+    public List<UsuarioDTO> listar() {
+        List<UsuarioDTO> list = new ArrayList<>();
+        usuarioDAO.listar().forEach(usuario -> list.add(new UsuarioDTO(usuario)));
+        return list;
     }
 
     @RequestMapping(method = RequestMethod.POST)
