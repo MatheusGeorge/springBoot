@@ -25,7 +25,7 @@ public class UsuarioDAO implements IUsuarioDAO{
     @Override
     public void salvar(Usuario usuario) {
         usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
-        // manager.persist(usuario);
+        manager.persist(usuario);
     }
 
     @Override

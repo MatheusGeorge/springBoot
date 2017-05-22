@@ -1,3 +1,6 @@
 INSERT IGNORE INTO role VALUES ('ROLE_ADMIN');
 INSERT IGNORE INTO role VALUES ('ROLE_USER');
 
+INSERT IGNORE INTO usuario VALUES (1, 'admin@admin.com', 'Administrador', '$2a$06$qvYRKXhHpqEFjJEx9v7wfu4cb1V0QbBkbhRfOIjHx13HRIUGR0UXS');
+INSERT IGNORE INTO usuario_roles VALUES (1, 'ROLE_ADMIN');
+INSERT IGNORE INTO telefone VALUES (1, 'Empresarial', '(11)9999-9999', 1);
