@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SpringBoot:war exploded">
-    <output-path>$PROJECT_DIR$/target/tully-api</output-path>
+    <output-path>$PROJECT_DIR$/target/spring-boot-exemplo</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -67,7 +67,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/tully-api/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/spring-boot-exemplo/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="SpringBoot/web/Web" />
     </root>
